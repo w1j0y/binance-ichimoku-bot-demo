@@ -259,7 +259,7 @@ async def text_dispatcher(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 def main():
     # User must insert their own Bot Token for testing.
-    if "PASTE_YOUR_OWN_TELEGRAM_BOT_TOKEN_HERE" in BOT_TOKEN or not BOT_TOKEN or len(BOT_TOKEN) < 40:
+    if not BOT_TOKEN or len(BOT_TOKEN) < 40:
         print("Please add your own Telegram bot token at the top of the script before running!")
         return 
     app = ApplicationBuilder().token(BOT_TOKEN).build()
